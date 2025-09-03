@@ -1,11 +1,13 @@
 import NavBar from "../../Components/NavBar.jsx";
+import Banner from "../../Components/Banner.jsx";
 import "./index.scss";
 
 function Index() {
   return (
-    <div className="Kasa-NavBar">
-      <NavBar />
-    </div>
+    <header>
+        <NavBar />
+        <Banner />
+    </header>
   );
 }
 
