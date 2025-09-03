@@ -1,0 +1,22 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 57px;
+    li{
+        list-style: none;
+        a {
+            list-style: none;
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+  }
+}
