@@ -1,9 +1,12 @@
 #root {
-  margin: 0 100px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
 }
 
-header{
+header, main{
+  margin: 0 100px;
   display: flex;
   flex-direction: column;
   gap: 50px;
