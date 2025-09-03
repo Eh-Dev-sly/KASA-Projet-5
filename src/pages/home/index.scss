@@ -2,6 +2,12 @@
   margin: 0 100px;
 }
 
+header{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
