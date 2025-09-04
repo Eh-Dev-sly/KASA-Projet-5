@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import Index from "./pages/home/index.jsx";
 import About from "./pages/about/about.jsx"; // il faut importer About si tu l'utilises
 import Error from "./Components/Error/error.jsx";
+import Appartement from "./pages/appartement/appartement.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} /> {/* page 404 */}
+        <Route path="/appartement/:id" element={<Appartement />} />
       </Routes>
     </Router>
   </StrictMode>
