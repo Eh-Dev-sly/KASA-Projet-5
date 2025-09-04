@@ -1,6 +1,5 @@
 import NavBar from "../../Components/NavBar.jsx";
-import Banner from "../../Components/Banner.jsx";
-import Gallery from "../../Components/Gallery.jsx";
+import AboutBanner from "../../Components/About_Banner.jsx";
 import Footer from "../../Components/Footer.jsx";
 import "./about.scss";
 
@@ -9,10 +8,9 @@ function About() {
     <>
       <header>
         <NavBar />
-        <Banner />
+        <AboutBanner />
       </header>
       <main>
-        <Gallery />
       </main>
       <footer>
         <Footer />
