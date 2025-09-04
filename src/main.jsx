@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Index from "./pages/home/index.jsx";
 import About from "./pages/about/about.jsx"; // il faut importer About si tu l'utilises
-import Error from "./Components/Error/index.jsx";
+import Error from "./Components/Error/error.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
