@@ -10,4 +10,11 @@ header, main{
   display: flex;
   flex-direction: column;
   gap: 50px;
+
+  .about_collapse{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 150px;
+  }
 }
