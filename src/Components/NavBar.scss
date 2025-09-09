@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -30,4 +32,37 @@ nav {
       }
     }
   }
+}
+
+@media (max-width: $mobile) {
+nav {
+  margin-top: 20px;
+    img{
+    width: 145px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+
+    li {
+      list-style: none;
+      text-transform: uppercase;
+
+      a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+
+        &.active {
+          text-decoration: underline;
+          text-decoration-color: #000;
+          text-underline-offset: 3px;
+        }
+      }
+    }
+  }
+}
 }
