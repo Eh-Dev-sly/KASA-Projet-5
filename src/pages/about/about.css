@@ -5,16 +5,9 @@
   gap: 50px;
 }
 
-header, main{
+header, main {
   margin: 0 100px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-
-  .about_collapse{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 150px;
-  }
-}
+}/*# sourceMappingURL=about.css.map */
