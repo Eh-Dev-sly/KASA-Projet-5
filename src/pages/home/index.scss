@@ -14,8 +14,12 @@
   }
   
   @media (max-width: $mobile) {
+    #root{
+      gap: 22px !important;
+    }
     header, main {
       margin: 0 20px;
+      gap: 22px !important;
     }
   }
 }
