@@ -3,128 +3,131 @@
 #root {
   gap: 50px;
 }
+.appartement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-/* ----------- Laptop ----------- */
-.laptop_version {
-  display: block;
+  .phone_version {
+    display: none;
+  }
+  .laptop_version {
+    display: block;
+  }
 
-  .appartement {
+  .appartement__image {
+    width: 100%;
+  }
+
+  .appartement__header {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 55px;
 
-    .appartement__image {
-      width: 100%;
-    }
-
-    .appartement__header {
+    .appartement__header-info {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .appartement__header-info {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        h1 {
-          font-size: 36px;
-          font-weight: 500;
-          color: #ff6060;
-        }
-
-        p {
-          font-size: 18px;
-          font-weight: 500;
-        }
-      }
-
-      .appartement__host {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-
-        img {
-          width: 64px;
-          height: 64px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-
-        p {
-          font-size: 18px;
-          width: 93px;
-          text-align: right;
-          color: #ff6060;
-          font-weight: 500;
-        }
-      }
-    }
-
-    .tags_rating {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .appartement_tags {
-      display: flex;
+      flex-direction: column;
       gap: 10px;
 
-      span {
-        padding: 0 30px;
-        height: 25px;
-        background-color: #ff6060;
-        color: #fff;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #ff6060;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 500;
       }
     }
 
-    .description_equipements {
+    .appartement__host {
       display: flex;
-      justify-content: space-between;
-      gap: 76px;
-      width: 100%;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
 
-      .description,
-      .equipements {
-        flex: 1;
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
       }
+
+      p {
+        font-size: 18px;
+        width: 93px;
+        text-align: right;
+        color: #ff6060;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .tags_rating {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .appartement_tags {
+    display: flex;
+    gap: 10px;
+
+    span {
+      width: fit-content;
+      height: 25px;
+      padding: 0 30px;
+      background-color: #ff6060;
+      color: #ffffff;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .description_equipements {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    width: 100%;
+
+    .description,
+    .equipements {
+      display: flex;
+      flex: 1;
     }
   }
 }
 
-/* ----------- Phone ----------- */
 @media (max-width: $mobile) {
-  .laptop_version {
-    display: none;
+  #root {
+    gap: 25px;
   }
-
-  .phone_version {
-    display: block;
-
-    .appartement {
+  .appartement {
+    gap: 15px;
+    .laptop_version {
+      display: none;
+    }
+    .phone_version {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-
-      .appartement__image {
-        width: 100%;
-      }
+      gap: 15px;
 
       .appartement__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 5px;
 
         .appartement__header-info {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 15px;
 
           h1 {
             font-size: 18px;
@@ -136,23 +139,42 @@
             font-size: 14px;
             font-weight: 500;
           }
+
+          .appartement_tags {
+            display: flex;
+            gap: 10px;
+
+            span {
+              width: fit-content;
+              height: 18px;
+              padding: 0 30px;
+              background-color: #ff6060;
+              color: #ffffff;
+              border-radius: 10px;
+              font-size: 10px;
+              font-weight: 700;
+              align-items: center;
+              justify-content: center;
+              display: flex;
+            }
+          }
         }
       }
     }
-
     .host_rating {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .rating img {
-        width: 18px;
-        height: 18px;
+      .rating {
+        img {
+          width: 18px;
+          height: 18px;
+        }
       }
-
       .appartement__host {
         display: flex;
         gap: 10px;
+        justify-content: center;
         align-items: center;
 
         img {
@@ -171,33 +193,17 @@
         }
       }
     }
-
-    .appartement_tags {
-      display: flex;
-      gap: 10px;
-
-      span {
-        padding: 0 30px;
-        height: 18px;
-        background-color: #ff6060;
-        color: #fff;
-        border-radius: 10px;
-        font-size: 10px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
     .description_equipements {
+      flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 20px;
       width: 100%;
 
       .description,
       .equipements {
+        display: flex;
         flex: 1;
       }
     }
