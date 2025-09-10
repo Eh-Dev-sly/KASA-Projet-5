@@ -47,41 +47,82 @@ function Appartement() {
             <Carrousel pictures={logement.pictures} />
           </div>
 
-          {/* Titre + Hôte */}
-          <div className="appartement__header">
-            <div className="appartement__header-info">
-              <h1 className="appartement__title">{logement.title}</h1>
-              <p className="appartement__location">{logement.location}</p>
+          <div className="laptop_version">
+            {/* Titre + Hôte */}
+            <div className="appartement__header">
+              <div className="appartement__header-info">
+                <h1 className="appartement__title">{logement.title}</h1>
+                <p className="appartement__location">{logement.location}</p>
+              </div>
+
+              <div className="appartement__host">
+                <p className="appartement__host-name">{name}</p>
+                <img
+                  className="appartement__host-picture"
+                  src={picture}
+                  alt={`Photo de profil de l'hôte : ${name}`}
+                />
+              </div>
             </div>
 
-            <div className="appartement__host">
-              <p className="appartement__host-name">{name}</p>
-              <img
-                className="appartement__host-picture"
-                src={picture}
-                alt={`Photo de profil de l'hôte : ${name}`}
-              />
+            {/* Tags + Rating */}
+            <div className="tags_rating">
+              <div className="appartement_tags">
+                {logement.tags.map((tag, index) => (
+                  <span key={index}>{tag}</span>
+                ))}
+              </div>
+
+              <div className="rating">
+                {Array(5)
+                  .fill(0)
+                  .map((_, index) => (
+                    <img
+                      src={index < ratingNumber ? activeStart : inactiveStart}
+                      alt={`Note de ${ratingNumber} sur 5`}
+                      key={index}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
-
-          {/* Tags + Rating */}
-          <div className="tags_rating">
+          {/* ------------------------------------------------------------------------------ */}
+          <div className="phone_version">
+            {/* Titre */}
+            <div className="appartement__header">
+              <div className="appartement__header-info">
+                <h1 className="appartement__title">{logement.title}</h1>
+                <p className="appartement__location">{logement.location}</p>
+            {/* Tags */}
             <div className="appartement_tags">
               {logement.tags.map((tag, index) => (
                 <span key={index}>{tag}</span>
               ))}
             </div>
+              </div>
+            </div>
 
-            <div className="rating">
-              {Array(5)
-                .fill(0)
-                .map((_, index) => (
-                  <img
-                    src={index < ratingNumber ? activeStart : inactiveStart}
-                    alt={`Note de ${ratingNumber} sur 5`}
-                    key={index}
-                  />
-                ))}
+            {/* Hôte & Rating */}
+            <div className="host_rating">
+              <div className="rating">
+                {Array(5)
+                  .fill(0)
+                  .map((_, index) => (
+                    <img
+                      src={index < ratingNumber ? activeStart : inactiveStart}
+                      alt={`Note de ${ratingNumber} sur 5`}
+                      key={index}
+                    />
+                  ))}
+              </div>
+              <div className="appartement__host">
+                <p className="appartement__host-name">{name}</p>
+                <img
+                  className="appartement__host-picture"
+                  src={picture}
+                  alt={`Photo de profil de l'hôte : ${name}`}
+                />
+              </div>
             </div>
           </div>
 
