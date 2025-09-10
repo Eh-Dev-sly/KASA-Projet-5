@@ -12,7 +12,9 @@
     display: none;
   }
   .laptop_version {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .appartement__image {
@@ -143,6 +145,7 @@
           .appartement_tags {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
 
             span {
               width: fit-content;

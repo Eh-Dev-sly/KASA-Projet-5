@@ -6,7 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   padding: 50px 50px 0px 50px;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 0 60px;
 
   .kasa-gallery-card {
     position: relative;
@@ -58,7 +59,7 @@
       font-size: 18px;
       z-index: 3;
       white-space: normal;
-      width: 230px;
+      width: 250px;
       height: 52px;
       display: flex;
       flex-direction: column;
@@ -79,5 +80,20 @@
     border-radius: 10px;
     margin-bottom: 0;
   }
-}
+      .card-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      z-index: 3;
+      white-space: normal;
+      width: 230px;
+      height: 52px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
