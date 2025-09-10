@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .collapse_button {
   width: 100%;
   display: flex;
@@ -65,4 +67,76 @@
       display: block;
     }
   }
+}
+
+@media (max-width: $mobile) {
+.collapse_button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .button_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    p {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease; /* rotation fluide */
+      }
+    }
+  }
+
+  .collapse_desc {
+    background-color: #f6f6f673;
+    overflow: hidden;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    height: 100%;
+    flex: 1;
+    display: none;
+    margin-bottom: 10px;
+
+    p,
+    ul {
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 12px;
+      line-height: 143%;
+    }
+
+    li {
+      list-style: none;
+      line-height: 143%;
+    }
+
+    &.open {
+      opacity: 1;
+      display: block;
+    }
+  }
+}
 }
