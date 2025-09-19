@@ -6,26 +6,14 @@ import Collapse from "../../Components/Collapse.jsx";
 import Footer from "../../Components/Footer.jsx";
 import activeStart from "../../assets/icons/star-on.svg";
 import inactiveStart from "../../assets/icons/star-off.svg";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 function Appartement() {
   const { id } = useParams();
   const logement = data.find((item) => item.id === id);
 
   if (!logement) {
-    return (
-      <>
-        <header>
-          <NavBar />
-        </header>
-        <main>
-          <p>Logement introuvable 😢</p>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </>
-    );
+    return <Navigate to="/error" replace />;
   }
 
   const ratingNumber = Number(logement.rating);
@@ -93,12 +81,12 @@ function Appartement() {
               <div className="appartement__header-info">
                 <h1 className="appartement__title">{logement.title}</h1>
                 <p className="appartement__location">{logement.location}</p>
-            {/* Tags */}
-            <div className="appartement_tags">
-              {logement.tags.map((tag, index) => (
-                <span key={index}>{tag}</span>
-              ))}
-            </div>
+                {/* Tags */}
+                <div className="appartement_tags">
+                  {logement.tags.map((tag, index) => (
+                    <span key={index}>{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
 
