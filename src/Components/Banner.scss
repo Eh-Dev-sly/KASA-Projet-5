@@ -66,3 +66,11 @@
   }
 }
 
+@media (max-width: $littleMobile) {
+  .banner {
+      .banner-title {
+      font-size: 20px !important;
+      width: 195px !important;
+    }
+  }
+}

@@ -21,6 +21,18 @@ main {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about_collapse {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: $tablet){
+  .about_collapse {
+    padding: 0 !important;
+  }
+}
+
 @media (max-width: $mobile) {
   #root {
     gap: 50px;
@@ -34,10 +46,7 @@ main {
     gap: 50px;
 
     .about_collapse {
-      display: flex;
-      flex-direction: column;
       gap: 20px;
-      padding: 0;
     }
   }
 }

@@ -63,11 +63,11 @@
   .kasa-gallery {
     gap: 20px;
     justify-content: center;
-  }
-
-  .kasa-gallery-card {
-    width: 31%;
-    height: 340px;
+    
+    .kasa-gallery-card {
+      width: 31%;
+      height: 340px;
+    }
   }
 }
 
@@ -83,16 +83,24 @@
     background-color: transparent;
     padding: 0;
     gap: 20px;
+    
+    .kasa-gallery-card {
+      width: 100% !important;
+      height: 255px;
+      margin-bottom: 0;
+    }
+    
+    .card-title {
+      width: 90%;
+      font-size: 16px;
+    }
   }
+}
 
+@media (max-width: $littleMobile) {
   .kasa-gallery-card {
-    width: 100% !important;
-    height: 255px;
-    margin-bottom: 0;
-  }
-
-  .card-title {
-    width: 90%;
-    font-size: 16px;
+    .card-title {
+      font-size: 15px;
+    }
   }
 }
