@@ -1,25 +1,25 @@
 @import "../../Components/variables.scss";
 
-#root {
-  margin: 0;
+.index {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  
-  header, main {
+
+  header,
+  main {
     margin: 0 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
-  
+
   @media (max-width: $mobile) {
-    #root{
-      gap: 22px !important;
-    }
-    header, main {
+    gap: 22px !important;
+    header,
+    main {
       margin: 0 20px;
       gap: 22px !important;
     }
   }
 }
+

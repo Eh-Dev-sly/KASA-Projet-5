@@ -1,15 +1,18 @@
 import NavBar from "../../Components/NavBar.jsx";
-import AboutBanner from "../../Components/About_Banner.jsx";
+import Banner from "../../Components/Banner";
 import Collapse from "../../Components/Collapse.jsx";
 import Footer from "../../Components/Footer.jsx";
+import aboutBanner from "../../assets/media/aboutBanner.png";
 import "./about.scss";
 
 function About() {
   return (
-    <>
+    <div className="about">
       <header>
         <NavBar />
-        <AboutBanner />
+        <div className="banner">
+        <Banner title="" imageSrc={aboutBanner} altText="Bannière Kasa de la page A propos"/>
+        </div>
       </header>
       <main>
         {/* Description & Equipements */}
@@ -39,7 +42,7 @@ function About() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

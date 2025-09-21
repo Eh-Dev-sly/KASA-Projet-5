@@ -6,12 +6,12 @@ import "./error.scss";
 
 function Error() {
     return (
-        <>
+        <div className="error">
             <header>
                 <NavBar />
             </header>
 
-            <div className="error">
+            <div className="error_content">
                 <img src={logo_404} alt="Logo d'erreur 404" />
                 <p>Oups! La page que vous demandez n'existe pas.</p>
                 <Link to="/">Retourner sur la page d’accueil</Link>
@@ -20,7 +20,7 @@ function Error() {
             <footer>
                 <Footer />
             </footer>
-        </>
+        </div>
     )
 }
 

@@ -1,36 +1,36 @@
 @import "../../Components/variables.scss";
 
-#root {
+.logement {
+  display: flex;
+  flex-direction: column;
   gap: 50px;
 }
+
 .appartement {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  .phone_version {
-    display: none;
-  }
-  .laptop_version {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .appartement__image {
     width: 100%;
   }
 
-  .appartement__header {
+  .appartement__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 55px;
+    gap: 40px;
 
     .appartement__header-info {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
+
+      .title_loc{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
       h1 {
         font-size: 36px;
@@ -42,57 +42,62 @@
         font-size: 18px;
         font-weight: 500;
       }
-    }
 
-    .appartement__host {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
+      .appartement_tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
 
-      img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      p {
-        font-size: 18px;
-        width: 93px;
-        text-align: right;
-        color: #ff6060;
-        font-weight: 500;
+        span {
+          padding: 0 30px;
+          height: 25px;
+          background-color: #ff6060;
+          color: #fff;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
-  }
 
-  .tags_rating {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .appartement_tags {
-    display: flex;
-    gap: 10px;
-
-    span {
-      width: fit-content;
-      height: 25px;
-      padding: 0 30px;
-      background-color: #ff6060;
-      color: #ffffff;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 700;
-      align-items: center;
-      justify-content: center;
+    .appartement__host-rating {
       display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 20px;
+
+      .rating {
+        display: flex;
+        gap: 5px;
+      }
+
+      .appartement__host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        p {
+          font-size: 18px;
+          width: 93px;
+          text-align: right;
+          color: #ff6060;
+          font-weight: 500;
+        }
+      }
     }
   }
 
   .description_equipements {
-    flex: 1;
     display: flex;
     justify-content: space-between;
     gap: 76px;
@@ -100,115 +105,79 @@
 
     .description,
     .equipements {
-      display: flex;
       flex: 1;
     }
   }
 }
 
 @media (max-width: $mobile) {
-  #root {
+  .logement {
     gap: 25px;
+    margin: 0 auto;
   }
+
+  header,
+  main {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
   .appartement {
     gap: 15px;
-    .laptop_version {
-      display: none;
-    }
-    .phone_version {
-      display: flex;
+
+    .appartement__info {
       flex-direction: column;
+      align-items: flex-start;
       gap: 15px;
 
-      .appartement__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5px;
-
-        .appartement__header-info {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-
-          h1 {
-            font-size: 18px;
-            font-weight: 500;
-            color: #ff6060;
-          }
-
-          p {
-            font-size: 14px;
-            font-weight: 500;
-          }
-
-          .appartement_tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-
-            span {
-              width: fit-content;
-              height: 18px;
-              padding: 0 30px;
-              background-color: #ff6060;
-              color: #ffffff;
-              border-radius: 10px;
-              font-size: 10px;
-              font-weight: 700;
-              align-items: center;
-              justify-content: center;
-              display: flex;
-            }
-          }
-        }
-      }
-    }
-    .host_rating {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .rating {
-        img {
-          width: 18px;
-          height: 18px;
-        }
-      }
-      .appartement__host {
-        display: flex;
+      .appartement__header-info {
         gap: 10px;
-        justify-content: center;
-        align-items: center;
 
-        img {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          object-fit: cover;
+        h1 {
+          font-size: 18px;
         }
 
         p {
-          font-size: 12px;
-          width: 83px;
-          text-align: right;
-          color: #ff6060;
-          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .appartement_tags span {
+          font-size: 10px;
+          height: 18px;
+          padding: 1px 15px;
+        }
+      }
+
+      .appartement__host-rating {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .rating img {
+          width: 18px;
+          height: 18px;
+        }
+
+        .appartement__host {
+          img {
+            width: 32px;
+            height: 32px;
+          }
+
+          p {
+            font-size: 12px;
+          }
         }
       }
     }
-    .description_equipements {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 20px;
-      width: 100%;
 
-      .description,
-      .equipements {
-        display: flex;
-        flex: 1;
-      }
+    .description_equipements {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }

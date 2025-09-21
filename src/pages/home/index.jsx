@@ -1,15 +1,16 @@
 import NavBar from "../../Components/NavBar.jsx";
-import Home_Banner from "../../Components/Home_Banner.jsx";
+import Banner from "../../Components/Banner";
 import Gallery from "../../Components/Gallery.jsx";
 import Footer from "../../Components/Footer.jsx";
+import homeBanner from "../../assets/media/banner.png";
 import "./index.scss";
 
 function Index() {
   return (
-    <>
+    <div className="index">
       <header>
         <NavBar />
-        <Home_Banner />
+        <Banner title="Chez vous, partout et ailleurs" imageSrc={homeBanner} altText="Bannière Kasa de la page d'Accueil"/>
       </header>
       <main>
         <Gallery />
@@ -17,7 +18,7 @@ function Index() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

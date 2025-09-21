@@ -1,19 +1,19 @@
 @import "../../Components/variables.scss";
 
-#root {
-  margin: 0;
+.about {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 38px;
 }
 
-header, main{
+header,
+main {
   margin: 0 100px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 38px;
 
-  .about_collapse{
+  .about_collapse {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -22,24 +22,22 @@ header, main{
 }
 
 @media (max-width: $mobile) {
-#root {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
+  #root {
+    gap: 50px;
+  }
 
-header, main{
-  margin: 0 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  .about_collapse{
+  header,
+  main {
+    margin: 0 100px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 0 ;
+    gap: 50px;
+
+    .about_collapse {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+    }
   }
-}
 }
