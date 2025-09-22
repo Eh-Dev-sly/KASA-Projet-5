@@ -1,0 +1,22 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.index header,
+.index main {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media (max-width: 678px) {
+  .index {
+    gap: 22px !important;
+  }
+  .index header,
+  .index main {
+    margin: 0 20px;
+    gap: 22px !important;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,47 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+header,
+main {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+header .about_collapse,
+main .about_collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 150px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about_collapse {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .about_collapse {
+    padding: 0 !important;
+  }
+}
+@media (max-width: 678px) {
+  #root {
+    gap: 50px;
+  }
+  header,
+  main {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  header .about_collapse,
+  main .about_collapse {
+    gap: 20px;
+  }
+}/*# sourceMappingURL=about.css.map */

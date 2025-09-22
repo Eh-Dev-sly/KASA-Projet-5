@@ -1,0 +1,128 @@
+.collapse_button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.collapse_button .button_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  height: 52px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.collapse_button .button_content p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.collapse_button .button_content button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.collapse_button .button_content button img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+.collapse_button .collapse_desc {
+  background-color: rgba(246, 246, 246, 0.4509803922);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translateY(-10px);
+  width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.collapse_button .collapse_desc p,
+.collapse_button .collapse_desc ul {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 25px;
+  line-height: 143%;
+}
+.collapse_button .collapse_desc li {
+  list-style: none;
+  line-height: 143%;
+}
+.collapse_button .collapse_desc.open {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 678px) {
+  .collapse_button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .collapse_button .button_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .collapse_button .button_content p {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .collapse_button .button_content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .collapse_button .button_content button img {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+  .collapse_button .collapse_desc {
+    background-color: rgba(246, 246, 246, 0.4509803922);
+    overflow: hidden;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    height: 100%;
+    flex: 1;
+    display: none;
+    margin-bottom: 10px;
+  }
+  .collapse_button .collapse_desc p,
+  .collapse_button .collapse_desc ul {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 12px;
+    line-height: 143%;
+  }
+  .collapse_button .collapse_desc li {
+    list-style: none;
+    line-height: 143%;
+  }
+  .collapse_button .collapse_desc.open {
+    opacity: 1;
+    display: block;
+  }
+}/*# sourceMappingURL=Collapse.css.map */
