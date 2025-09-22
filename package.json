@@ -1,16 +1,16 @@
 {
+  "homepage" : "https://eh-dev-sly.github.io/KASA-Projet-5/",
   "name": "kasa",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Eh-Dev-sly.github.io/KASA-Projet-5",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^19.1.1",
