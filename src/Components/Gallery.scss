@@ -3,15 +3,14 @@
 .kasa-gallery {
   background-color: #f6f6f6;
   border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
+  padding: 50px;
+  justify-content: start;
 
   .kasa-gallery-card {
     position: relative;
-    width: 30%;
     height: 340px;
     border-radius: 10px;
     overflow: hidden;
@@ -24,6 +23,11 @@
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     &::after {
@@ -59,21 +63,13 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: $tablet) {
   .kasa-gallery {
     gap: 20px;
     justify-content: center;
-    
-    .kasa-gallery-card {
-      width: 31%;
-      height: 340px;
-    }
   }
-}
 
-@media (max-width: $tablet) {
   .kasa-gallery-card {
-    width: 46% !important;
     height: 280px;
   }
 }
@@ -83,13 +79,12 @@
     background-color: transparent;
     padding: 0;
     gap: 20px;
-    
-    .kasa-gallery-card {
-      width: 100% !important;
-      height: 255px;
-      margin-bottom: 0;
-    }
-    
+    justify-content: center;
+  }
+
+  .kasa-gallery-card {
+    height: 255px;
+
     .card-title {
       width: 90%;
       font-size: 16px;
