@@ -25,16 +25,18 @@ body {
       a {
         color: #000;
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 500; // par défaut pour desktop
 
         &.active {
           text-decoration: underline;
           text-underline-offset: 4px;
+          font-weight: 500; // reste 500 sur desktop
         }
       }
     }
   }
 
+  /* Tablette et mobile */
   @media (max-width: $mobile) {
     margin-top: 20px;
 
@@ -47,6 +49,10 @@ body {
 
       li a {
         font-size: 12px;
+
+        &.active {
+          font-weight: 600; // plus épais sur tablette/mobile
+        }
       }
     }
   }
@@ -56,12 +62,8 @@ body {
     gap: 20px;
 
     .nav-links {
-      gap: 45px;
+      gap: 20px;
       padding: 0;
-
-      a.active{
-        font-weight: 600;
-      }
     }
   }
 }
