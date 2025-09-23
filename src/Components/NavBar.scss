@@ -56,9 +56,12 @@ body {
     gap: 20px;
 
     .nav-links {
-      flex-direction: column;
-      gap: 15px;
+      gap: 45px;
       padding: 0;
+
+      a.active{
+        font-weight: 600;
+      }
     }
   }
 }
