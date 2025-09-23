@@ -9,12 +9,12 @@ import './main.scss';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Router>
+    <Router basename="/KASA-Projet-5">
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} /> 
         <Route path="/appartement/:id" element={<Appartement />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </StrictMode>
